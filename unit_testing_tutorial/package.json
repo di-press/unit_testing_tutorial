@@ -1,0 +1,15 @@
+{
+  "name": "unit_testing_tutorial",
+  "version": "1.0.0",
+  "description": "A simple CRUD app to demonstrate unit testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
