@@ -1,0 +1,32 @@
+name: Node.js Integration Tests
+
+on:
+  push:
+    branches: [integration_test]
+  pull_request:
+    branches: [integration_test]
+
+jobs:
+  integration-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      
+      - name: Install dependencies
+        run: npm ci
+        working-directory: unit_testing_tutorial
+
+      
+      - name: Run integration tests
+        run: npm run integration
+        working-directory: unit_testing_tutorial
