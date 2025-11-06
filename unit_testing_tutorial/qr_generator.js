@@ -4,7 +4,7 @@ const path = require('path');
 
 /**
  * generate a QR code PNG for a given text and save it to the output folder,
- * returning the full filepath.
+ * returning the full file path.
  */
 async function generateQRCode(text, outputDir = 'qrcodes') {
   const outputPath = path.join(__dirname, outputDir);
